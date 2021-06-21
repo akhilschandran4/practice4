@@ -3,11 +3,6 @@ terraform {
     azurerm = {
       source  = "hashicorp/azurerm"
       version = "=2.46.0"
-      storage_account_name = "mystorageaccount"
-      container_name      =  "myfile"
-      key                  = "terraform.tfstate"
-      
-
 
     }
   }
