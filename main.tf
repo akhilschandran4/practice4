@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "azurerm" {
-  featurs{}
+  features{}
 }
 
 resource "azurerm_resource_group" "test" {
@@ -21,5 +21,9 @@ resource "azurerm_storage_account" "test" {
   resource_group_name = azurerm_resource_group.test.name
   account_replication_type = "GRS"
   account_tier = "standard"
+}
+
+tags={
+  enviornment = "developement"
 }
 
