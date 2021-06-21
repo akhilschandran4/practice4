@@ -3,6 +3,12 @@ terraform {
     azurerm = {
       source  = "hashicorp/azurerm"
       version = "=2.46.0"
+      storage_account_name = "mystorageaccount"
+      container_name      =  "myfile"
+      key                  = "terraform.tfstate"
+      
+
+
     }
   }
 }
@@ -19,7 +25,7 @@ resource "azurerm_resource_group" "test" {
 }
 
 resource "azurerm_storage_account" "test" {
-  name = "mystorageaccount"
+  name = ""
   resource_group_name = azurerm_resource_group.test.name
   location = azurerm_resource_group.test.location
   account_replication_type = "GRS"
