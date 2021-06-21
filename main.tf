@@ -1,5 +1,5 @@
 terraform {
-    azureem ={
+    azurerm ={
         source = "hashicorp/azurerm"
         version = "2.46.0"
     }
@@ -21,6 +21,3 @@ resource "azurerm_storage_account" "test" {
   account_tier = "standard"
 }
 
-tags ={
-    enviornment = "developement"
-}
