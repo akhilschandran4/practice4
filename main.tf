@@ -4,7 +4,8 @@ terraform {
     storage_account_name = "mystorageaccountqaz123"
     container_name = "myfile"
     key = "terraform.tfstate"
-
+    source  = "hashicorp/azurerm"
+    version = "=2.46.0" 
   }
 }
 
@@ -23,8 +24,11 @@ resource "azurerm_storage_account" "test" {
   name = "mystorageaccountqaz123"
   resource_group_name = azurerm_resource_group.test.name
   location = azurerm_resource_group.test.location
-  account_replication_type = "GRS"
+  account_replication_type = "LRS"
   account_tier = "standard"
+
+tags={
+  enviornment = "dev"
 }
 
 
