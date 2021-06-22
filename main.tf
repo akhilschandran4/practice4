@@ -4,12 +4,7 @@ terraform {
     storage_account_name = "mystorageaccountqaz123"
     container_name = "myfile"
     key = "terraform.tfstate"
-  }
-  
-      source  = "hashicorp/azurerm"
-      version = "=2.46.0"
 
-    }
   }
 }
 
