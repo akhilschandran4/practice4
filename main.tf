@@ -26,6 +26,7 @@ resource "azurerm_storage_account" "test" {
   location = azurerm_resource_group.test.location
   account_replication_type = "LRS"
   account_tier = "standard"
+}
 
 tags={
   enviornment = "dev"
