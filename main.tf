@@ -1,6 +1,11 @@
 terraform {
-  required_providers {
-    azurerm = {
+  backend "azurerm" {
+    resource_group_name = "store_rg"
+    storage_account_name = "mystorageaccountqaz123"
+    container_name = "myfile"
+    key = "terraform.tfstate"
+  }
+  
       source  = "hashicorp/azurerm"
       version = "=2.46.0"
 
