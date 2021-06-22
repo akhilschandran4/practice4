@@ -28,9 +28,7 @@ resource "azurerm_storage_account" "test" {
   account_tier = "standard"
 }
 
-tags={
-  enviornment = "dev"
-}
+
 
 
 
